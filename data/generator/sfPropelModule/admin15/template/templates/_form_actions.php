@@ -18,6 +18,9 @@
 <?php elseif ('_save_and_add' == $name): ?>
   <?php echo $this->addCredentialCondition('[?php echo $helper->linkToSaveAndAdd($form->getObject(), '.$this->asPhp($params).') ?]', $params) ?>
 
+<?php elseif ('_save_and_list' == $name): ?>
+  <?php echo $this->addCredentialCondition('[?php echo $helper->linkToSaveAndList($form->getObject(), '.$this->asPhp($params).') ?]', $params) ?>
+
 <?php else: ?>
   <li class="sf_admin_action_<?php echo $params['class_suffix'] ?>">
 [?php if (method_exists($helper, 'linkTo<?php echo $method = ucfirst(sfInflector::camelize($name)) ?>')): ?]
